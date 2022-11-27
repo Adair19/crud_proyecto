@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/xd', function() {
         "nombre" => "ostias"
     ]);
 });
+
+Route::name('publis')->get('/publis',[ApiController::class, 'publicaciones']);
